@@ -20,3 +20,5 @@ spec:
         ports:
         - name: port-helloworld
           containerPort: 3000
+      nodeSelector:
+        hardware: high-spec
