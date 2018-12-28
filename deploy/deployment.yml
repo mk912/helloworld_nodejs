@@ -26,5 +26,11 @@ spec:
             port: port-helloworld
           initialDelaySeconds: 15
           timeoutSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /
+            port: port-helloworld
+          initialDelaySeconds: 15
+          timeoutSeconds: 30
       nodeSelector:
         hardware: high-spec
