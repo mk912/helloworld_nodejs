@@ -20,5 +20,11 @@ spec:
         ports:
         - name: port-helloworld
           containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: port-helloworld
+          initialDelaySeconds: 15
+          timeoutSeconds: 30
       nodeSelector:
         hardware: high-spec
